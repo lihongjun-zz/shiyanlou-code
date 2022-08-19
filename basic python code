@@ -1,0 +1,27 @@
+######求 N 个数字的平均值#####
+##vim average.py     用vim新建py文件，按i进入插入数，esc退出插入状态，  输入：wq保存并退出文件
+#!/usr/bin/env python3
+N = 10
+sum = 0
+count = 0
+print("please input 10 numbers:")
+while count < N:
+    number = float(input())
+    sum = sum + number
+    count = count + 1
+average = sum / N
+print("N = {}, Sum = {}".format(N, sum))
+print("Average = {:.2f}".format(average))
+
+##chmod +x averagen.py   可执行权力
+##./averagen.py          执行文件
+
+#####将华氏温度转为摄氏温度#####
+fahrenheit = 0
+print("Fahrenheit Celsius")
+while fahrenheit <= 250:
+    celsius = (fahrenheit - 32) / 1.8 # 转换为摄氏度
+    print("{:5d} {:7.2f}".format(fahrenheit , celsius)) ##{:5d} 的意思是替换为 5 个字符宽度的整数，宽度不足则使用空格填充。 
+    ##{:7.2f}的意思是替换为为 7 个字符宽度的保留两位的小数，小数点也算一个宽度，宽度不足则使用空格填充。
+    ##其中7指宽度为 7，.2f指保留两位小数。
+    fahrenheit = fahrenheit + 25
